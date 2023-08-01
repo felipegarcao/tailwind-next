@@ -1,8 +1,8 @@
-'use client'
-
 import * as Tabs from '@radix-ui/react-tabs'
 import { useState } from 'react'
 import { TabItem } from './TabItem'
+
+import { MyDetails } from '@/app/screens/MyDetails'
 
 export function SettingsTabs() {
   const [currentTab, setCurrentTab] = useState('tab1')
@@ -62,6 +62,10 @@ export function SettingsTabs() {
           isSelected={currentTab === 'tab10'}
         />
       </Tabs.List>
+
+      <Tabs.Content value="tab1">
+        <MyDetails />
+      </Tabs.Content>
     </Tabs.Root>
   )
 }
