@@ -1,9 +1,10 @@
 'use client'
 
-import * as Input from '@/components/Input'
-import { Mail } from 'lucide-react'
 import * as FileInput from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
+import { SelectItem } from '@/components/Form/Select/SelectItem'
+import * as Input from '@/components/Input'
+import { Mail } from 'lucide-react'
 import { useEffect } from 'react'
 
 export function MyDetails() {
@@ -109,7 +110,10 @@ export function MyDetails() {
             Country
           </label>
 
-          <Select />
+          <Select placeholder="Select a country....">
+            <SelectItem value="br" text="Brazil" />
+            <SelectItem value="us" text="United States" />
+          </Select>
           <div></div>
         </div>
 
@@ -121,7 +125,13 @@ export function MyDetails() {
             Timezone
           </label>
 
-          <div></div>
+          <Select placeholder="Select Timezone....">
+            <SelectItem
+              value="pacific"
+              text="Pacific Standard Time (PST) UTC−08:00"
+            />
+            <SelectItem value="br" text="America São Paulo UTC-03:00" />
+          </Select>
         </div>
 
         <div className="grid grid-cols-form gap-3 pt-5">
