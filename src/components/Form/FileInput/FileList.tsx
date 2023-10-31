@@ -12,7 +12,7 @@ export function FileList() {
     <div className="mt-4 flex flex-col gap-3">
       {files.map((file) => {
         return (
-         <FileItem key={file.name} name={file.name} size={file.size} />
+         <FileItem key={file.name} name={file.name} size={file.size} state='error' />
         )
       })}
     </div>
